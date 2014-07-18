@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Nostalgia Machine</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,400italic|Montserrat' rel='stylesheet' type='text/css'>
+
+
+    </head>
+    <body>
+	    <header>
+	    	<div>
+	    		<a href="index.html"><h1>The<br>Nostalgia<br>Machine</h1></a>
+	    		<p>Get your 2004 jam on</p>
+	    	</div>
+	    </header>
+	   	<section>
+	    <div class="dropdownLink">
+			 <form name="navList" onsubmit="return submitForm();"> 
+				 <div id="year">
+				 	<label>1: Pick Year</label>
+					 <span class='css-select-moz'>
+					<select name="subMenu"> 
+						<option value="" disabled selected>YEAR</option>
+						<option value="years/2013.html">2013</option>
+						<option value="years/2012.html">2012</option>
+						<option value="years/2011.html">2011</option>
+						<option value="years/2010.html">2010</option>
+						<option value="years/2009.html">2009</option>
+						<option value="years/2008.html">2008</option>
+						<option value="years/2007.html">2007</option>
+						<option value="years/2006.html">2006</option>
+						<option value="years/2005.html">2005</option>
+						<option value="years/2004.html">2004</option>
+						<option value="years/2003.html">2003</option>
+						<option value="years/2002.html">2002</option>
+						<option value="years/2001.html">2001</option>
+						<option value="years/2000.html">2000</option>
+						<option value="years/1999.html">1999</option>
+						<option value="years/1998.html">1998</option>
+						<option value="years/1997.html">1997</option>
+						<option value="years/1996.html">1996</option>
+						<option value="years/1995.html">1995</option>
+						<option value="years/1994.html">1994</option>
+						<option value="years/1993.html">1993</option>
+						<option value="years/1992.html">1992</option>
+						<option value="years/1991.html">1991</option>
+						<option value="years/1990.html">1990</option>
+						<option value="years/1989.html">1989</option>
+						<option value="years/1988.html">1988</option>
+						<option value="years/1987.html">1987</option>
+						<option value="years/1986.html">1986</option>
+						<option value="years/1985.html">1985</option>
+						<option value="years/1984.html">1984</option>
+						<option value="years/1983.html">1983</option>
+						<option value="years/1982.html">1982</option>
+						<option value="years/1981.html">1981</option>
+						<option value="years/1980.html">1980</option>
+						<option value="years/1979.html">1979</option>
+						<option value="years/1978.html">1978</option>
+						<option value="years/1977.html">1977</option>
+						<option value="years/1976.html">1976</option>
+						<option value="years/1975.html">1975</option>
+						<option value="years/1974.html">1974</option>
+						<option value="years/1973.html">1973</option>
+						<option value="years/1972.html">1972</option>
+						<option value="years/1971.html">1971</option>
+						<option value="years/1970.html">1970</option>
+						<option value="years/1969.html">1969</option>
+						<option value="years/1968.html">1968</option>
+						<option value="years/1967.html">1967</option>
+						<option value="years/1966.html">1966</option>
+						<option value="years/1965.html">1965</option>
+						<option value="years/1964.html">1964</option>
+						<option value="years/1963.html">1963</option>
+						<option value="years/1962.html">1962</option>
+						<option value="years/1961.html">1961</option>
+						<option value="years/1960.html">1960</option>
+					</select> 
+					</span>
+				</div>
+				<div id="go">
+						<label>2: Jam</label>
+						<input type="submit" value="Hit me!" /> 
+				</div>
+				<label id="note">For optimum nostalgia pick a childhood year</label>
+			</form>
+	    </div>
+	    </section>
+
+
+
+
+	
+		    <script type="text/javascript"> 
+				function submitForm() { 
+					var list = document.navList.subMenu; 
+					var page = list.options[ list.selectedIndex ].value; 
+					if (page != "home") 
+					window.location = page; 
+				return false; 
+				} 
+			</script> 
+    </body>
+</html>
+
+
+
+
