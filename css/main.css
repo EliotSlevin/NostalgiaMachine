@@ -355,3 +355,77 @@ footer a:hover{
      background-position: 150px, 0px;
     }
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+
+and (max-width : 510px) {
+
+header{
+  height: 120px;
+}
+
+header div h1 {
+  font-size: 20px;
+}
+
+.dropdownLink div{
+  float: none;
+  margin-left: auto;
+margin-right: auto;
+width: 210px;
+}
+
+#note {
+  display: none;
+}
+
+section{
+  width: 300px;
+}
+
+.dropdownLink{
+  width: 100%;
+  height: auto;
+  position: static;
+  left: auto;
+  top: auto;
+  margin-left: 0px;
+  margin-top: 50px;
+}
+
+footer{
+  display: none;
+}
+
+.vid {
+  width: 300px;
+  height: 159px;
+  background-size: 300px;
+  background-position: 0px, -28px;
+
+}
+
+.vid div h3{
+  font-size: 20px;
+  margin-left: 0px;
+  width: 280px;
+}
+
+.embed{
+  width: 300px;
+  height: 159px;
+}
+
+
+.embed iframe{
+  width: 300px !important;
+  height: 159px !important;
+}
+
+.loading{
+    background-size: 30px 30px;
+}
+
+}
+
