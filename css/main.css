@@ -46,6 +46,10 @@ header p{
     font-weight: 200;
 }
 
+#buttons{
+  width: 100%;
+}
+
 .dropdownLink select, input{
     margin-bottom: 20px;
 }
@@ -128,6 +132,8 @@ input{
     background-color: white;
     color: #f9886b;
 }
+
+
 
 input:hover{
     background-color: #f9886b;
@@ -376,6 +382,10 @@ margin-right: auto;
 width: 210px;
 }
 
+#buttons{
+  display: none;
+}
+
 #note {
   display: none;
 }
@@ -432,4 +442,25 @@ footer{
 #twitter-widget-0{
   width: 100px !important;
   height: 28px !important;
+  position: relative;
+left: 60px;
+}
+
+#donate{
+  position: relative;
+width: 100px;
+left: 250px;
+top: -34px;
+}
+
+#buttons .fb-share-button{
+  width: 50px;
+  position: relative;
+  top: -3px;
+}
+
+#costs{
+  position: relative;
+  text-decoration: none;
+
 }
