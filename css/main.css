@@ -31,6 +31,13 @@ header p{
     margin-top: -100px;
 }
 
+#embedly{
+float: right;
+margin-right: 71px;
+position: relative;
+top: -55px;
+}
+
 
 .dropdownLink{
     width: 460px;
@@ -291,6 +298,10 @@ max-width: 450px;
    header div p{
     display: none;
    }
+
+   #embedly{
+    top: -105px;
+   }
 }
 
 footer {
@@ -363,9 +374,7 @@ footer a:hover{
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-
-and (max-width : 510px) {
+@media only screen and (max-width : 510px) {
 
 header{
   height: 120px;
@@ -389,6 +398,7 @@ width: 210px;
 #note {
   display: none;
 }
+
 
 section{
   width: 300px;
@@ -437,7 +447,19 @@ footer{
     background-size: 30px 30px;
 }
 
+#embedly{
+  top: -72px;
+  margin-right: 20px;
 }
+
+}
+
+
+
+
+
+
+
 
 #twitter-widget-0{
   width: 100px !important;
@@ -464,3 +486,5 @@ top: -34px;
   text-decoration: none;
 
 }
+
+
