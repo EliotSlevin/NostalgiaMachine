@@ -479,7 +479,10 @@ top: -34px;
   width: 50px;
   position: relative;
   top: -3px;
+  overflow: hidden;
 }
+
+
 
 #costs{
   position: relative;
