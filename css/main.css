@@ -569,3 +569,24 @@ opacity: 0.6;
 .writing{
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+
+
+.plug{
+    padding: 5px;
+    border: 1px solid #f9886b;
+    color: #f9886b;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 40px;
+    width: 92%;
+    display: block;
+    border-radius: 3px;
+}
+
+.plug:hover{
+    background-color: #f9886b;
+    color: white;
+}
+
