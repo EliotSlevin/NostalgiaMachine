@@ -166,6 +166,8 @@ select{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 20px;
+
+    -webkit-appearance: none;
 }
 
 select:hover{
