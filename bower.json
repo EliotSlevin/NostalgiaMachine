@@ -1,0 +1,25 @@
+{
+  "name": "The Nostalgia Machine",
+  "homepage": "https://github.com/EliotSlevin/TNM2",
+  "authors": [
+    "Eliot Slevin <Eliot.slevin@gmail.com>"
+  ],
+  "description": "Party hard farm",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "director": "^1.2.8",
+    "handlebars": "^4.0.5",
+    "jQuery": "^3.1.0",
+    "clipboard": "^1.5.12",
+    "animate.css": "^3.5.2"
+  }
+}

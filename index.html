@@ -1,153 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>The Nostalgia Machine</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,400italic|Montserrat' rel='stylesheet' type='text/css'>
-		<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Nostalgia Machine</title>
+    <meta name="description" content="Relive the music of your childhood!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta name='description' content='Get your childhood jam on. Popular music from the 1960’s to modern day, relive the music of your childhood. Pick a year and start listening.'>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<script src="../bower_components/jQuery/dist/jquery.min.js"></script>
 
-  ga('create', 'UA-37796090-2', 'auto');
-  ga('send', 'pageview');
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/0f4eef4a59.js"></script>
 
-</script>
-    </head>
-    <body>
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-	    <header>
-	    	<div>
-	    		<a href="index.html"><h1>The<br>Nostalgia<br>Machine</h1></a>
-	    		<p>Get your childhood jam on</p>
-	    		<a target="_blank" href="http://embed.ly" id="embedly" ><img src="img/embedly.png" /></a>
-	    	</div>
-	    </header>
-	   	<section>
-	    <div class="dropdownLink">
-			 <form name="navList" onsubmit="return submitForm();"> 
-				 <div id="year">
-				 	<label>1: Pick Year</label>
-					 <span class='css-select-moz'>
-					<select name="subMenu"> 
-						<option value="" disabled selected>YEAR</option>
-						<option value="years/2013.html">2013</option>
-						<option value="years/2012.html">2012</option>
-						<option value="years/2011.html">2011</option>
-						<option value="years/2010.html">2010</option>
-						<option value="years/2009.html">2009</option>
-						<option value="years/2008.html">2008</option>
-						<option value="years/2007.html">2007</option>
-						<option value="years/2006.html">2006</option>
-						<option value="years/2005.html">2005</option>
-						<option value="years/2004.html">2004</option>
-						<option value="years/2003.html">2003</option>
-						<option value="years/2002.html">2002</option>
-						<option value="years/2001.html">2001</option>
-						<option value="years/2000.html">2000</option>
-						<option value="years/1999.html">1999</option>
-						<option value="years/1998.html">1998</option>
-						<option value="years/1997.html">1997</option>
-						<option value="years/1996.html">1996</option>
-						<option value="years/1995.html">1995</option>
-						<option value="years/1994.html">1994</option>
-						<option value="years/1993.html">1993</option>
-						<option value="years/1992.html">1992</option>
-						<option value="years/1991.html">1991</option>
-						<option value="years/1990.html">1990</option>
-						<option value="years/1989.html">1989</option>
-						<option value="years/1988.html">1988</option>
-						<option value="years/1987.html">1987</option>
-						<option value="years/1986.html">1986</option>
-						<option value="years/1985.html">1985</option>
-						<option value="years/1984.html">1984</option>
-						<option value="years/1983.html">1983</option>
-						<option value="years/1982.html">1982</option>
-						<option value="years/1981.html">1981</option>
-						<option value="years/1980.html">1980</option>
-						<option value="years/1979.html">1979</option>
-						<option value="years/1978.html">1978</option>
-						<option value="years/1977.html">1977</option>
-						<option value="years/1976.html">1976</option>
-						<option value="years/1975.html">1975</option>
-						<option value="years/1974.html">1974</option>
-						<option value="years/1973.html">1973</option>
-						<option value="years/1972.html">1972</option>
-						<option value="years/1971.html">1971</option>
-						<option value="years/1970.html">1970</option>
-						<option value="years/1969.html">1969</option>
-						<option value="years/1968.html">1968</option>
-						<option value="years/1967.html">1967</option>
-						<option value="years/1966.html">1966</option>
-						<option value="years/1965.html">1965</option>
-						<option value="years/1964.html">1964</option>
-						<option value="years/1963.html">1963</option>
-						<option value="years/1962.html">1962</option>
-						<option value="years/1961.html">1961</option>
-						<option value="years/1960.html">1960</option>
-					</select> 
-					</span>
-				</div>
-				<div id="go">
-						<label>2: Jam</label>
-						<input type="submit" value="Hit me!" /> 
-				</div>
-				<label id="note">For optimum nostalgia pick a childhood year</label>
+  </head>
+  <body>
+    <header class="big">
+      <h1>The<br> Nostalgia<br> Machine</h1>
+     <!--  <a href="http://thenostalgiamachine.com/" class="kpop-landing">Also try the Kpop Machine!</a> -->
+    </header>
+
+    <div class="landing-wrap">
+    	<div class="g-50">
+    		<p>1. Pick year</p>
+    		<select id="year-picker">
+		        <option value="2015">2015</option>
+		        <option value="2014">2014</option>
+		        <option value="2013">2013</option>
+		        <option value="2012">2012</option>
+		        <option value="2011">2011</option>
+		        <option value="2010">2010</option>
+		        <option value="2009">2009</option>
+		        <option value="2008">2008</option>
+		        <option value="2007">2007</option>
+		        <option value="2006">2006</option>
+		        <option value="2005">2005</option>
+		        <option value="2004">2004</option>
+		        <option value="2003">2003</option>
+		        <option value="2002">2002</option>
+		        <option value="2001">2001</option>
+		        <option value="2000">2000</option>
+		        <option value="1999">1999</option>
+		        <option value="1998">1998</option>
+		        <option value="1997">1997</option>
+		        <option value="1996">1996</option>
+		        <option value="1995">1995</option>
+		        <option value="1994">1994</option>
+		        <option value="1993">1993</option>
+		        <option value="1992">1992</option>
+		        <option value="1991">1991</option>
+		        <option value="1990">1990</option>
+		        <option value="1989">1989</option>
+		        <option value="1988">1988</option>
+		        <option value="1987">1987</option>
+		        <option value="1986">1986</option>
+		        <option value="1985">1985</option>
+		        <option value="1984">1984</option>
+		        <option value="1983">1983</option>
+		        <option value="1982">1982</option>
+		        <option value="1981">1981</option>
+		        <option value="1980">1980</option>
+		        <option value="1979">1979</option>
+		        <option value="1978">1978</option>
+		        <option value="1977">1977</option>
+		        <option value="1976">1976</option>
+		        <option value="1975">1975</option>
+		        <option value="1974">1974</option>
+		        <option value="1973">1973</option>
+		        <option value="1972">1972</option>
+		        <option value="1971">1971</option>
+		        <option value="1970">1970</option>
+		        <option value="1969">1969</option>
+		        <option value="1968">1968</option>
+		        <option value="1967">1967</option>
+		        <option value="1966">1966</option>
+		        <option value="1965">1965</option>
+		        <option value="1964">1964</option>
+		        <option value="1963">1963</option>
+		        <option value="1962">1962</option>
+		        <option value="1961">1961</option>
+		        <option value="1960">1960</option>
+		        <option value="1959">1959</option>
+		        <option value="1958">1958</option>
+		        <option value="1957">1957</option>
+		        <option value="1956">1956</option>
+		        <option value="1955">1955</option>
+		        <option value="1954">1954</option>
+		        <option value="1953">1953</option>
+		        <option value="1952">1952</option>
+		        <option value="1951">1951</option>
+		      </select>
 
 
-			</form>
+    	</div>
+    	<div class="g-50">
+    		<p>2. Jam</p>
+    		<div class="button-big" onclick="startClick()">Hit me!</div>
+    	</div>
+
+    	<div class="g-100">
+    		<p><em>For the best results pick a childhood year</em></p>
+    	</div>
+    </div>
+    
+    <script>
+    	function startClick(){
+    		var year = $("select").val();
+    		window.location.href = window.location.href + 'y/#' + year;
+    	}
+    </script>
+
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-37796090-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 
-			<div id="buttons">
+<style>
+
+     	h1{
+     		font-size: 2.5em !important;
+     	}
+
+     	.big{
+     		position: static;
+     	}
+
+     	p{
+     		font-size: 19px;
+     		width: 100%;
+     	}
+
+     	html, body{
+     		height: 100%;     	}
+
+     	body{
+     		display: flex;
+     		background-color: white;
+     		flex-direction: column;
+     		justify-content: center;
+     		align-items: center;
+     	}
+
+     	.landing-wrap{
+     		max-width: 400px;
+     		margin: auto;
+     		color: #F27D70;
+     	}
+
+     	.g-50{
+     		width: 50%;
+     		box-sizing: border-box;
+     		padding: 10px;
+     		float: left;
+     	}
+
+     	.g-100{
+     		width: 100%;
+     		overflow: hidden;
+     		box-sizing: border-box;
+     		padding: 10px;
+     		float: left;
+     	}
+
+     	.kpop-landing{
+     		color: white;
+     		align-self: center;
+     		text-decoration: none;
+     		padding-left: 40px;
+     	}
+
+     	.kpop-landing:hover{
+     		text-decoration: underline;
+     	}
+
+     	select{
+     		margin: 0px;
+     		border: none;
+     		width: 100%;
+     		transition: ease all 0.2s;
+     	}
+
+     	select:hover{
+ 			background-color: #E26D60;
+			color: white;
+     	}
 
 
+     		@-webkit-keyframes sheen {
+				  0% {
+				    -webkit-transform: skewY(-45deg) translateX(0);
+				            transform: skewY(-45deg) translateX(0);
+				  }
+				  100% {
+				    -webkit-transform: skewY(-45deg) translateX(12.5em);
+				            transform: skewY(-45deg) translateX(12.5em);
+				  }
+				}
+				@keyframes sheen {
+				  0% {
+				    -webkit-transform: skewY(-45deg) translateX(0);
+				            transform: skewY(-45deg) translateX(0);
+				  }
+				  100% {
+				    -webkit-transform: skewY(-45deg) translateX(12.5em);
+				            transform: skewY(-45deg) translateX(12.5em);
+				  }
+				}
+
+				.button-big {
+				  padding: 0.25em 0.5em;
+				  height: 60px;
+				  width: 100%;
+				  line-height: 43px;
+				  text-align: center;
+				  color: #F27D70;
+				  cursor: pointer;
+				  border: 2px solid #F27D70;
+				  font-size: 24px;
+				  display: inline-block;
+				  border-radius: 0.3em;
+				  -webkit-transition: all 0.2s ease-in-out;
+				  transition: all 0.2s ease-in-out;
+				  position: relative;
+				  overflow: hidden;
+				}
+				.button-big:before {
+				  content: "";
+				  background-color: rgba(255, 255, 255, 0.5);
+				  height: 100%;
+				  width: 3em;
+				  display: block;
+				  position: absolute;
+				  top: 0;
+				  left: -4.5em;
+				  -webkit-transform: skewX(-45deg) translateX(0);
+				          transform: skewX(-45deg) translateX(0);
+				  -webkit-transition: none;
+				  transition: none;
+				}
+				.button-big:hover {
+				  background-color: #F27D70;
+				  color: #fff;
+				  border-bottom: 4px solid #C1645A;
+				}
+				.button-big:active {
+				  border-bottom: 0px solid #C1645A;
+				}
+				.button-big:hover:before {
+				  -webkit-transform: skewX(-45deg) translateX(13.5em);
+				          transform: skewX(-45deg) translateX(13.5em);
+				  -webkit-transition: all 0.5s ease-in-out;
+				  transition: all 0.5s ease-in-out;
+				}
 
 
+     	</style>
+    </div>
 
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			<div class="fb-share-button" data-href="http://thenostalgiamachine.com/"></div>
-					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://thenostalgiamachine.com/" data-text="Get your childhood jams on" data-via="Justiceojuice">Tweet</a>
-				</div>
-
-	    </div>
-
-
-	    
-	    </section>
-
-
-	
-		    <script type="text/javascript"> 
-				function submitForm() { 
-					var list = document.navList.subMenu; 
-					var page = list.options[ list.selectedIndex ].value; 
-					if (page != "home") 
-					window.location = page; 
-				return false; 
-				} 
-			</script> 
-			<script type="text/javascript"
-src="https://cdn.embedly.com/widgets/platform.js" async></script>
-    </body>
+  </body>
 </html>
-
-
-
-

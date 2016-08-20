@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Nostalgia Machine</title>
+    <meta name="description" content="Relive the music of your childhood!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="../bower_components/jQuery/dist/jquery.min.js"></script>
+    <script src="../bower_components/handlebars/handlebars.min.js"></script>
+    <script src="../bower_components/director/build/director.min.js"></script>
+    <script src="../bower_components/clipboard/dist/clipboard.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,400italic|Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/0f4eef4a59.js"></script>
+
+    <!-- Load data before app -->
+    <script src="../js/years.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/youtube.js"></script>
+
+  </head>
+  <body>
+
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '149915675436372',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <header>
+      <h1>The<br> Nostalgia<br> Machine</h1>
+
+      <select id="year-picker">
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+        <option value="2009">2009</option>
+        <option value="2008">2008</option>
+        <option value="2007">2007</option>
+        <option value="2006">2006</option>
+        <option value="2005">2005</option>
+        <option value="2004">2004</option>
+        <option value="2003">2003</option>
+        <option value="2002">2002</option>
+        <option value="2001">2001</option>
+        <option value="2000">2000</option>
+        <option value="1999">1999</option>
+        <option value="1998">1998</option>
+        <option value="1997">1997</option>
+        <option value="1996">1996</option>
+        <option value="1995">1995</option>
+        <option value="1994">1994</option>
+        <option value="1993">1993</option>
+        <option value="1992">1992</option>
+        <option value="1991">1991</option>
+        <option value="1990">1990</option>
+        <option value="1989">1989</option>
+        <option value="1988">1988</option>
+        <option value="1987">1987</option>
+        <option value="1986">1986</option>
+        <option value="1985">1985</option>
+        <option value="1984">1984</option>
+        <option value="1983">1983</option>
+        <option value="1982">1982</option>
+        <option value="1981">1981</option>
+        <option value="1980">1980</option>
+        <option value="1979">1979</option>
+        <option value="1978">1978</option>
+        <option value="1977">1977</option>
+        <option value="1976">1976</option>
+        <option value="1975">1975</option>
+        <option value="1974">1974</option>
+        <option value="1973">1973</option>
+        <option value="1972">1972</option>
+        <option value="1971">1971</option>
+        <option value="1970">1970</option>
+        <option value="1969">1969</option>
+        <option value="1968">1968</option>
+        <option value="1967">1967</option>
+        <option value="1966">1966</option>
+        <option value="1965">1965</option>
+        <option value="1964">1964</option>
+        <option value="1963">1963</option>
+        <option value="1962">1962</option>
+        <option value="1961">1961</option>
+        <option value="1960">1960</option>
+        <option value="1959">1959</option>
+        <option value="1958">1958</option>
+        <option value="1957">1957</option>
+        <option value="1956">1956</option>
+        <option value="1955">1955</option>
+        <option value="1954">1954</option>
+        <option value="1953">1953</option>
+        <option value="1952">1952</option>
+        <option value="1951">1951</option>
+      </select>
+      
+<!--       <a href="http://thenostalgiamachine.com/" class="kpop">Also try the Kpop Machine!</a>
+ -->
+      <div class="button" id="open-now-playing" onclick="openNowPlaying()">Now Playing</div>
+    </header>
+
+    <aside>      
+      <div id="player"></div>
+      <h2 id="now-playing">Now Playing</h2>
+      <div id="share-buttons"></div>
+      <div class="g-bar">
+        <h3>Up Next</h3>
+        <div class="button" onclick="skipClick()">Skip current song <i class="fa fa-step-forward" aria-hidden="true"></i></div>
+      </div>
+
+      <div id="queue">  
+      </div>
+
+      <div id="close" onclick="closeNowPlaying(this)">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          Back
+      </div>
+    </aside>
+
+    <div id="videos">
+    </div>
+
+    <footer>
+        <p><a href="../faq.html">Faq</a> <a href="https://twitter.com/NostalgiaMachin">Twitter</a></p>
+    </footer>
+
+
+  <!-- Templates -->
+    <script id="video-template" type="text/x-handlebars-template">
+      <div class="videos">
+        {{#each songs}}
+          <div class="video">
+            <img src="http://img.youtube.com/vi/{{this.[2]}}/mqdefault.jpg" onclick="videoClick({{{json this}}})">
+            <div onclick="queueClick({{{json this}}})" class="addToQueue"><i class="fa fa-plus" aria-hidden="true"></i></div>
+            <p><strong>{{this.[0]}}</strong> - {{this.[1]}}</p>
+          </div>
+        {{/each}}
+      </div>
+    </script>
+
+    <script id="queue-template" type="text/x-handlebars-template">
+      <div class="queued-videos">
+        {{#each .}}
+          <p onclick="inQueueClick({{@index}})" ><strong>{{name}}</strong> - {{artist}}</p>
+        {{/each}}
+
+        {{#if .}}
+        {{else}}
+            <p>Your queue is empty :( <br><br>
+            Hit a <i class="fa fa-plus" aria-hidden="true"></i> button to add a song to your queue.</p>
+            <img src="../img/add.png">
+        {{/if}}
+      </div>
+    </script>
+
+    <script id="share-buttons-template" type="text/x-handlebars-template">
+       <div class="button" id="copy-url" data-clipboard-text="{{url}}" onclick="copyUrlClick(this)"><i class="fa fa-clipboard" aria-hidden="true"></i>
+ Copy youtube link</div>
+       <div class="button" onclick="shareFbClick({{{json this}}})"><i class="fa fa-facebook" aria-hidden="true"></i> Share</div>
+
+       <a href="https://twitter.com/intent/tweet?url={{url}}&text={{title}}&via={{via}}&hashtags={{hashtags}}" target="_blank" class="button"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-37796090-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>

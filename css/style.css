@@ -1,0 +1,437 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F3EDEC;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+aside{
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	width: 480px;
+	height: 100%;
+	background-color: #F27D70;
+	color: white;
+	z-index: 2;
+	-webkit-transform: translateX(480px);
+	-ms-transform: translateX(480px);
+	transform: translateX(480px);
+
+	transition: ease all 0.5s;
+}
+
+.active aside{
+	transform: translateX(0px);
+}
+
+#close{
+	display: none;
+}
+
+aside h3{
+	padding: 20px;
+	margin: 0px;
+}
+
+aside h2{
+	padding: 20px;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+
+#queue p{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0px;
+}
+
+#queue p:hover{
+	background-color: rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+
+
+#videos{
+	width: calc(100% - 480px);
+	margin-left: calc(480px /2);
+	transition: ease all 0.5s;
+}
+
+.active #videos{
+	margin-left: 0px;
+}
+
+.videos{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 121px;
+}
+
+.video{
+	width: 320px;
+	cursor: pointer;
+	background-color: white;
+	margin: 5px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+    border-radius: 5px;
+}
+
+.video img{
+	width: 100%;
+	height: 180px;
+}
+
+.video:hover{
+	background-color: #F27D70;
+	color: white;
+}
+
+.video:hover .addToQueue{
+	display: block;
+}
+
+.video p{
+	margin: 0px;
+	padding: 5px;
+}
+
+.addToQueue{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-size: 40px;
+	height: 40px;
+	line-height: 40px;
+	width: 40px;
+	text-align: center;
+	border-radius: 3px;
+
+	color: #F27D70;
+	/*background-color: white;*/
+	display: none;
+}
+
+.addToQueue:hover{
+	color: white;
+	background-color: #F27D70;
+}
+
+
+header{
+	display: flex;
+	background-color: #F27D70;
+	background-image: url('../img/bg.png');
+	background-size: 412px 412px;
+	color: white;
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#open-now-playing{
+	display: none;
+}
+
+h1{
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	font-size: 24px;
+}
+
+select{
+	padding: 0.25em 0.5em;
+	height: 60px;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    background-color: #F27D70;
+    font-size: 24px;
+    border-radius: 0.3em;
+    outline: none;
+    cursor: pointer;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+}
+
+select:hover{
+	background-color: white;
+	color: #F27D70;
+}
+
+/* grid wooo */
+
+.g-bar{
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	align-items: center;
+
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.g-bar h3, .g-bar p{
+	width: 50%;
+}
+
+.button{
+	display: inline-block;
+	padding: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
+	text-decoration: none;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+.button:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+
+#share-buttons{
+	padding-bottom: 10px;
+	padding-top: 0px;
+}
+
+footer p{
+	padding-left: 20px;
+}
+
+.kpop{
+	color: white;
+    text-decoration: none;
+    align-self: center;
+    padding: 20px;
+}
+
+.kpop:hover{
+	text-decoration: underline;
+}
+
+.queued-videos span{
+	text-align: center;
+}
+
+.queued-videos img{
+ 	max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+@media all and (max-width: 1500px){
+	aside{
+		width: 360px;
+		/*font-size: 14px;*/
+		-webkit-transform: translateX(3600px);
+		-ms-transform: translateX(3600px);
+		transform: translateX(3600px);
+	}
+
+	#videos{
+		width: calc(100% - 360px);
+		margin-left: calc(360px /2);
+	}
+
+	iframe{
+		width: 360px;
+		height: 202px;
+	}
+
+	#share-buttons{
+		padding: 10px;
+		padding-top: 0px;
+	}
+
+	.button{
+		margin: 0;
+	}
+}
+
+@media all and (max-width: 1400px){
+	.video{
+		width: 200px;
+	}
+
+	.video img{
+		height: 112px;
+	}
+
+	header h1{
+		font-size: 18px;
+	}
+
+	.videos{
+		margin-top: 100px;
+	}
+}
+
+@media all and (max-width: 1024px){
+	/* TABLET MODE GO */
+	#videos{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.video{
+		width: 360px;
+	}
+
+	.video img{
+		height: 202px;
+	}
+
+	.addToQueue{
+		display: block;
+
+
+	    font-size: 60px;
+	    height: 60px;
+	    line-height: 60px;
+	    width: 60px;
+	}
+
+
+	iframe{
+		width: 480px;
+		height: 270px;
+		float: left;
+	}
+
+	h2, #share-buttons{
+		overflow: hidden;
+	}
+
+	aside{
+		width: 100%;
+		-webkit-transform: translateX(0px);
+	    -ms-transform: translateX(0px);
+		transform: translateX(0px);
+
+		-webkit-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+
+	.closed{
+		-webkit-transform: translateY(-100%) !important;
+	    -ms-transform: translateY(-100%) !important;
+		transform: translateY(-100%) !important;
+	}
+
+
+	#close{
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 70px;
+		bottom: 10px;
+		right: 10px;
+		font-size: 18px;
+		text-align: center;
+		border-radius: 3px;
+	}
+
+	#close i{
+		font-size: 40px;
+	}
+
+
+	#close:hover{
+		background-color: white;
+		color: #F27D70;
+	}
+
+
+	.active aside{
+		-webkit-transform: translateY(0%);
+	    -ms-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+
+	#open-now-playing{
+		font-size: 19px;
+	    height: auto;
+	    align-self: center;
+	    margin-left: auto;
+	}
+
+	.active header #open-now-playing{
+		display: block;
+	}
+
+}
+
+@media all and (max-width: 700px){
+	iframe{
+		width: 360px;
+		height: 202x;
+	}
+
+	.kpop{
+		display: none;
+	}
+}
+
+@media all and (max-width: 600px){
+	iframe{
+		width: 100%;
+		height: 202px;
+		float: none;
+	}
+
+	select{
+		font-size: 20px;
+	    padding: 0.1em 0.2em;
+	}
+
+	#open-now-playing{
+		font-size: 16px;
+	    height: auto;
+	    text-align: right;
+	    align-self: center;
+	    margin-left: auto;
+	}
+
+	h2 {
+	    font-size: 20px;
+	    margin-top: 0px;
+	    padding-bottom: 10px !important;
+	}
+
+	#share-buttons{
+		padding-bottom: 0px !important;
+	}
+
+	.queued-videos img{
+    	display: none;
+	}
+
+}
+
+
+/* Iphone Media Query (kinda) */
+.isIphone .addToQueue{
+	display: none !important;
+}
