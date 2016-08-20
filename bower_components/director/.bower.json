@@ -15,6 +15,5 @@
   },
   "_source": "https://github.com/flatiron/director.git",
   "_target": "^1.2.8",
-  "_originalSource": "director",
-  "_direct": true
+  "_originalSource": "director"
 }
