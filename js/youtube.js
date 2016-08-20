@@ -69,7 +69,7 @@ var aVideoHasBeenPlayed = false;
 
         currentVideo.url = "https://www.youtube.com/watch?v=" + id;
         currentVideo.title = name + " - " + artist;
-        currentVideo.via = "NostalgiaMachin"; // our new twitter handle here
+        currentVideo.via = "thatsnostalgic"; // our new twitter handle here
 
         renderShareButtons();
 
