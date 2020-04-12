@@ -13,7 +13,7 @@ var _1986 = {
 		["Whitney Houston","Greatest Love of All","IYzlVDlE72w"],
 		["Atlantic Starr","Secret Lovers","Oe2UXqFo0DY"],
 		["Gloria Loring and Carl Anderson","Friends and Lovers","i9CtUkJcH1Y"],
-		["Peter Cetera","Glory of Love","1cUx11m2ZaU"],
+		["Peter Cetera","Glory of Love","yQHhqDRn4_c"],
 		["Pet Shop Boys","West End Girls","p3j2NYZ8FKs"],
 		["Billy Ocean","There'll Be Sad Songs (To Make You Cry)","KLjpJZbxkAU"],
 		["Simple Minds","Alive and Kicking","ljIQo1OHkTI"],
