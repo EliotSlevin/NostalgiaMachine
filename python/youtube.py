@@ -125,6 +125,9 @@ def get_youtube_links_from_songs():
                         except Exception as e:
                             print('exception: ', e)
                             print('search query no result. Skipping this song.')
+                            print('saving songs so far...')
+                            with open(f'data/{year}.json', 'w') as f:
+                                json.dump(songs, f)
                             exit()
                         print(f'video id found: {video_id}')
                         song_arr.append(video_id)
