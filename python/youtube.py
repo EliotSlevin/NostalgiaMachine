@@ -144,10 +144,21 @@ def get_youtube_links_from_songs():
             with open(f'data/{year}.json', 'w') as f:
                 json.dump(songs, f)
 
+def print_all_years_minified():
+    START_YEAR = 2016
+    END_YEAR = 2025
+
+    for year in range(START_YEAR, END_YEAR+1):
+        file_path = f'data/{year}.json'
+        with open(file_path) as f:
+            songs = json.load(f)
+            print(f'var _{year} = {{ songs: {songs} }}')
+
 def main():
     # search_response = search_yt('Post Malone White Iverson')
     # display_yt_results(search_response)
-    get_youtube_links_from_songs()
+    # get_youtube_links_from_songs()
+    print_all_years_minified()
 
 if __name__ == '__main__':
     main()
