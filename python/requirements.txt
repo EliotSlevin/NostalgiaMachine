@@ -11,7 +11,7 @@ googleapis-common-protos==1.70.0
 httplib2==0.31.0
 idna==3.10
 proto-plus==1.26.1
-protobuf==6.32.1
+protobuf==6.33.5
 pyasn1==0.6.1
 pyasn1_modules==0.4.2
 pyparsing==3.2.5
